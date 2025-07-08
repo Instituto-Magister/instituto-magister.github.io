@@ -32,15 +32,16 @@
     header {
       background-color: #000;
       color: white;
-      padding: 15px;
+      padding: 30px;
       text-align: left;
       font-size: 30px;
       margin-bottom: 40px;
+      font-weight: bold;
     }
 
     section {
       background-color: #ffffff;
-      padding: 20px;
+      padding: 20px 60px;
       border-radius: 12px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       margin-bottom: 30px;
@@ -68,6 +69,30 @@
       margin-top: 25px;
       margin-bottom: 10px;
     }
+
+    .imagenes-lineas {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .imagen-linea {
+      width: 30%;
+      text-align: center;
+    }
+
+    .imagen-linea img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .imagen-linea p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #0f5b0d;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -93,7 +118,7 @@
   </section>
 
   <section>
-    <h2>Proyectos y líneas de investigación</h2>
+    <h2>Líneas de investigación</h2>
     <p>El IMED organiza sus actividades de investigación en torno a líneas prioritarias que responden a desafíos sociales actuales. Entre ellas se destacan:</p>
     <ul>
       <li>Desarrollo humano y comunidad</li>
@@ -102,7 +127,21 @@
       <li>Salud mental, subjetividad y exclusión social</li>
       <li>Problemas de gobernabilidad, ciudadanía y cultura política</li>
     </ul>
-    <!-- Aquí irán las tres imágenes representativas de las líneas de investigación -->
+
+    <div class="imagenes-lineas">
+      <div class="imagen-linea">
+        <img src="Imed.Inv.02.jpg" alt="Desarrollo humano y comunidad">
+        <p>Desarrollo humano y comunidad</p>
+      </div>
+      <div class="imagen-linea">
+        <img src="Imed.Inv.01.jpg" alt="Salud mental, subjetividad y exclusión social">
+        <p>Salud mental, subjetividad y exclusión social</p>
+      </div>
+      <div class="imagen-linea">
+        <img src="Imed.Inv.03.jpg" alt="Educación, formación docente e innovación pedagógica">
+        <p>Educación, formación docente e innovación pedagógica</p>
+      </div>
+    </div>
   </section>
 
   <section>
