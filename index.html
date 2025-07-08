@@ -11,6 +11,25 @@
       background-color: #f8f8f8;
     }
 
+    nav {
+      background-color: #0f5b0d;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     header {
       text-align: center;
       margin-bottom: 40px;
@@ -61,10 +80,17 @@
     .actividad img {
       width: 100%;
       height: auto;
-      max-height: 300px;
+      max-height: 600px;
       object-fit: contain;
       border-radius: 8px;
       margin-bottom: 10px;
+    }
+
+    .actividad p strong {
+      display: block;
+      font-size: 20px;
+      color: #0f5b0d;
+      margin-bottom: 6px;
     }
 
     .quienes-somos-banner {
@@ -86,7 +112,7 @@
     }
 
     .quienes-somos-texto {
-      font-size: 21px;
+      font-size: 22px;
       background-color: #ffffff;
       padding: 20px;
       border-radius: 12px;
@@ -137,20 +163,33 @@
     <h1>Instituto Magister de Estudios para el Desarrollo (IMED)</h1>
   </header>
 
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="investigacion.html">Investigación</a>
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="publicaciones.html">Publicaciones</a>
+    <a href="magister-science-journal.html">Magister Science Journal</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
   <section>
     <h2>Actividades</h2>
     <div class="actividades-grid">
       <div class="actividad">
         <img src="proyectos.jpg" alt="Proyectos de investigación">
-        <p><strong>Proyectos de investigación:</strong><br>Desarrollo de estudios interdisciplinarios en ciencias sociales.</p>
+        <p><strong>Proyectos de investigación</strong><br>
+        Desarrollo de estudios interdisciplinarios en ciencias sociales.</p>
       </div>
       <div class="actividad">
         <img src="Imed.Act.02.EAC.jpeg" alt="Taller de artículos científicos">
-        <p><strong>Elaboración del artículo científico: de la investigación a la publicación</strong><br>El IMED presenta este curso dirigido a profesores, investigadores y estudiantes universitarios, e investigadores de centros de investigación, que pretenden adquirir o potenciar competencias investigativas con miras a la publicación de artículos en revistas científicas.</p>
+        <p><strong>Elaboración del artículo científico: de la investigación a la publicación</strong><br>
+        El IMED presenta este curso dirigido a profesores, investigadores y estudiantes universitarios, e investigadores de centros de investigación, que pretenden adquirir o potenciar competencias investigativas con miras a la publicación de artículos en revistas científicas.</p>
       </div>
       <div class="actividad">
         <img src="Imed.Act.03.MSJ.jpg" alt="Magister Science Journal">
-        <p><strong>Magister Science Journal</strong><br>El IMED convoca a la comunidad académica al envío de artículos científicos en lengua española o inglesa, para la publicación de la revista Magister Science Journal. En esta ocasión la convocatoria corresponde al Volumen 5, No. 1 de nuestra revista.</p>
+        <p><strong>Magister Science Journal</strong><br>
+        El IMED convoca a la comunidad académica al envío de artículos científicos en lengua española o inglesa, para la publicación de la revista Magister Science Journal. En esta ocasión la convocatoria corresponde al Volumen 5, No. 1 de nuestra revista.</p>
       </div>
     </div>
   </section>
