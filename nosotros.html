@@ -2,141 +2,122 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre nosotros - IMED</title>
   <link rel="stylesheet" href="estilos.css" />
-  <style>
-    .investigador {
-      display: flex;
-      gap: 20px;
-      margin-top: 40px;
-      align-items: flex-start;
-    }
-    .investigador img {
-      width: 150px;
-      height: auto;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-    .investigador-info {
-      flex: 1;
-    }
-    .investigador-info h4 {
-      margin: 0 0 8px;
-      color: #003366;
-    }
-    .investigador-links {
-      margin-top: 8px;
-    }
-    .investigador-links a {
-      margin-right: 12px;
-      color: #0f5b0d;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .investigador-links a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
-  <div class="navbar">
+  <header class="navbar">
     <a href="index.html">Inicio</a>
     <a href="investigacion.html">Investigación</a>
-    <a href="nosotros.html">Sobre nosotros</a>
-  </div>
+    <a href="nosotros.html" class="activo">Sobre nosotros</a>
+  </header>
 
-  <div class="hero">
-    Sobre nosotros
-  </div>
+  <section class="hero">
+    <h1>Sobre nosotros</h1>
+  </section>
 
-  <div class="contenido">
-    <p><strong>El Instituto Magíster de Estudios para el Desarrollo (IMED)</strong> es una organización dedicada a la investigación científica en diversas disciplinas, con un enfoque interdisciplinario...</p>
+  <main class="contenido">
+    <section class="descripcion">
+      <p><strong>El Instituto Magíster de Estudios para el Desarrollo (IMED)</strong> es una organización dedicada a la investigación científica en diversas disciplinas, con un enfoque interdisciplinario que busca responder a los desafíos sociales, culturales y educativos contemporáneos. Desde su fundación en 2018, el <strong>IMED</strong> ha impulsado el estudio riguroso de fenómenos complejos que afectan a las personas y a sus comunidades, con un compromiso constante con la generación de conocimiento relevante y transformador.</p>
+      <p><strong>El Instituto Magíster de Estudios para el Desarrollo (IMED)</strong> constituye una unidad de investigación y formación no escolarizada dependiente de Magister SAC, empresa orientada, entre otras actividades, a la consultoría e investigación en diferentes disciplinas.</p>
+    </section>
 
-    <div class="fundadores">
+    <section class="columnas">
+      <div class="columna">
+        <h2>Fundación</h2>
+        <p>El Instituto Magíster de Estudios para el Desarrollo (IMED) se constituyó en abril del 2018, con el objeto de orientar y delinear áreas específicas de investigación social.</p>
+      </div>
+      <div class="columna">
+        <h2>Propósito</h2>
+        <p>El propósito del IMED es contribuir al estudio y discusión sobre temas de interés para el desarrollo de la persona y su comunidad, como componentes fundamentales de toda sociedad.</p>
+      </div>
+    </section>
+
+    <section class="fundadores">
       <h2>Fundadores</h2>
       <div class="fundador-container">
         <div class="fundador-col">
-          <img src="img/Imed.05.BCM.jpg" alt="Britaldo Campos Marín" class="fundador-img" />
-          <p><strong>Britaldo Campos Marín</strong></p>
+          <img src="img/Imed.Fundador.BCM.jpg" alt="Britaldo Campos Marín" class="fundador-img" />
+          <h3>Britaldo Campos Marín</h3>
           <p>(18 de marzo, 1943 – 26 de mayo, 2021)</p>
-          <p>Don Britaldo Campos fue docente ordinario en la cátedra de Maestro en Ciencias con mención en Física...</p>
+          <p>Don Britaldo Campos fue docente ordinario en la cátedra de Maestro en Ciencias con mención en Física y Licenciado en Física, por la Universidad Nacional de Trujillo, con estudios en Física Experimental Nuclear, en la Universidad de La Plata (Argentina). Fue vicepresidente administrativo y secretario general de la Universidad Privada de Trujillo (Perú) y vicepresidente administrativo y fundador de la Universidad César Vallejo (Perú).</p>
         </div>
         <div class="fundador-col">
-          <img src="img/Imed.06.LMLM.jpg" alt="Lidia Marina Lizarzaburu Montero" class="fundador-img" />
-          <p><strong>Lidia Marina Lizarzaburu Montero</strong></p>
+          <img src="img/Imed.Fundadora.LMLM.jpg" alt="Lidia Marina Lizarzaburu Montero" class="fundador-img" />
+          <h3>Lidia Marina Lizarzaburu Montero</h3>
           <p>Directora</p>
-          <p>Master en Estadística Matemática, por la Universidad de Chile y el Centro Interamericano de Enseñanza de la Estadística...</p>
+          <p>Master en Estadística Matemática, por la Universidad de Chile y el Centro Interamericano de Enseñanza de la Estadística; y Licenciada en Estadística, por la Universidad Nacional de Trujillo (Perú). Doctor Honoris Causa por la Universidad José Carlos Mariátegui y la Universidad San Pedro, Profesora Emérita de la Universidad Nacional de Trujillo y Miembro Honorario del Colegio de Estadísticos del Perú.</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <h2 style="margin-top: 60px; background-color: #0f5b0d; color: white; padding: 10px;">
-      Investigadores principales
-    </h2>
+    <section class="investigadores">
+      <h2>Investigadores principales</h2>
 
-    <div class="investigador">
-      <img src="img/Imed.03.RJFL.jpg" alt="Reynaldo Javier Franco Lizarzaburu" />
-      <div class="investigador-info">
-        <h4>Reynaldo Javier Franco Lizarzaburu</h4>
-        <p>Médico Cirujano por la Universidad Nacional de Trujillo (Perú)...</p>
-        <div class="investigador-links">
-          <a href="https://orcid.org/0000-0002-9558-8059" target="_blank">ORCID</a>
-          <a href="https://www.researchgate.net/profile/Reynaldo-Lizarzaburu" target="_blank">ResearchGate</a>
-          <a href="https://renati.sunedu.gob.pe/simple-search?query=REYNALDO+JAVIER+FRANCO+LIZARZABURU" target="_blank">RENATI</a>
+      <div class="investigador">
+        <img src="img/Imed.07.RJFL.jpg" alt="Reynaldo Javier Franco Lizarzaburu" />
+        <div class="investigador-info">
+          <h4>Reynaldo Javier Franco Lizarzaburu</h4>
+          <p>Médico Cirujano por la Universidad Nacional de Trujillo (Perú), con especialidad en Medicina Familiar y Comunitaria, por la Universidad Antenor Orrego (Perú), estudios de maestría en Educación en Medicina por la Universidad San Pedro (Perú), y diplomado en investigación científica, también por la Universidad San Pedro (Perú). Ha realizado investigación como investigador principal e investigador adjunto en torno a tratamientos complementarios para pacientes con diabetes mellitus, y tuberculosis, y ha participado en estudios sobre investigación científica universitaria y violencia contra la gestante. Ha sido asesor de tesis y docente de la Escuela de Medicina de la Universidad San Pedro.</p>
+          <div class="investigador-links">
+            <a href="https://orcid.org/0000-0002-9558-8059" target="_blank">ORCID</a>
+            <a href="https://www.researchgate.net/profile/Reynaldo-Lizarzaburu" target="_blank">ResearchGate</a>
+            <a href="https://renati.sunedu.gob.pe/simple-search?query=REYNALDO+JAVIER+FRANCO+LIZARZABURU" target="_blank">RENATI</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="investigador">
-      <img src="img/Imed.01.BECM.jpg" alt="Bárbara Eliana Coaguila Mitta" />
-      <div class="investigador-info">
-        <h4>Bárbara Eliana Coaguila Mitta</h4>
-        <p>Doctora en Ciencias de la Educación (Perú)...</p>
-        <div class="investigador-links">
-          <a href="https://orcid.org/0000-0003-1845-7503" target="_blank">ORCID</a>
+      <div class="investigador">
+        <img src="img/Imed.07.BECM.jpg" alt="Bárbara Eliana Coaguila Mitta" />
+        <div class="investigador-info">
+          <h4>Bárbara Eliana Coaguila Mitta</h4>
+          <p>Doctora en Ciencias de la Educación (Perú), por la Universidad Nacional de San Agustín (Perú), magíster en Docencia Superior y Gestión Educativa, por la Universidad César Vallejo (Perú), y Asistenta Social, por la Universidad Nacional de San Agustín (Perú). Es profesora asociada de la Facultad de Ciencias Histórico Sociales de la Universidad Nacional de San Agustín, en Arequipa (Perú). Ha desarrollado investigación respecto de la comunidad en entornos urbanos y rurales.</p>
+          <div class="investigador-links">
+            <a href="https://orcid.org/0000-0003-1845-7503" target="_blank">ORCID</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="investigador">
-      <img src="img/Imed.07.AICJ.jpg" alt="Areliz Irma Colque Jara" />
-      <div class="investigador-info">
-        <h4>Areliz Irma Colque Jara</h4>
-        <p>Doctora en Administración, por la Universidad Privada de Tacna (Perú)...</p>
-        <div class="investigador-links">
-          <a href="https://orcid.org/0000-0001-8645-2515" target="_blank">ORCID</a>
+      <div class="investigador">
+        <img src="img/Imed.07.AICJ.jpg" alt="Areliz Irma Colque Jara" />
+        <div class="investigador-info">
+          <h4>Areliz Irma Colque Jara</h4>
+          <p>Doctora en Administración, por la Universidad Privada de Tacna (Perú), magíster en Psicología Educativa, por la Universidad César Vallejo (Perú), magíster en Docencia Universitaria y Gestión Educativa, por la Universidad Privada de Tacna (Perú), y Psicóloga, por la Universidad Nacional de San Agustín (Perú). Fundadora de la Escuela Académica de Psicología de la Universidad José Carlos Mariátegui (Perú), ha ejercido como coordinadora de la Escuela de Posgrado, y docente de posgrado y pregrado de la misma universidad.</p>
+          <div class="investigador-links">
+            <a href="https://orcid.org/0000-0001-8645-2515" target="_blank">ORCID</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="investigador">
-      <img src="img/Imed.04.OAGM.jpg" alt="Oscar Alberto Granados Maldonado" />
-      <div class="investigador-info">
-        <h4>Oscar Alberto Granados Maldonado</h4>
-        <p>Doctor en Administración, por la Universidad Privada de Tacna (Perú)...</p>
-        <div class="investigador-links">
-          <a href="https://orcid.org/0000-0001-6542-7003" target="_blank">ORCID</a>
+      <div class="investigador">
+        <img src="img/Imed.07.OAGM.jpg" alt="Oscar Alberto Granados Maldonado" />
+        <div class="investigador-info">
+          <h4>Oscar Alberto Granados Maldonado</h4>
+          <p>Doctor en Administración, por la Universidad Privada de Tacna (Perú), magíster en Docencia Universitaria y Gestión Educativa, por la Universidad Privada de Tacna (Perú), y Médico Veterinario Zootecnista, por la Universidad Nacional del Altiplano. En la gestión pública, ha sido Director Ejecutivo del Servicio Nacional de Sanidad Agraria (Senasa, Perú) en las regiones de Cusco y Moquegua. Ha ejercido la docencia en la Universidad José Carlos Mariátegui y en la Universidad Alas Peruanas.</p>
+          <div class="investigador-links">
+            <a href="https://orcid.org/0000-0001-6542-7003" target="_blank">ORCID</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="investigador">
-      <img src="img/Imed.02.WBCL.jpg" alt="William B. Campos Lizarzaburu" />
-      <div class="investigador-info">
-        <h4>William B. Campos Lizarzaburu</h4>
-        <p>Doctor en Administración y Magister en Docencia Universitaria y Gestión Educativa...</p>
-        <div class="investigador-links">
-          <a href="https://orcid.org/0000-0002-9654-5915" target="_blank">ORCID</a>
-          <a href="https://independent.academia.edu/WilliamCamposLizarzaburu" target="_blank">Academia.edu</a>
-          <a href="https://www.researchgate.net/profile/William_Lizarzaburu" target="_blank">ResearchGate</a>
+      <div class="investigador">
+        <img src="img/Imed.07.WBCL.jpg" alt="William B. Campos Lizarzaburu" />
+        <div class="investigador-info">
+          <h4>William B. Campos Lizarzaburu</h4>
+          <p>Doctor en Administración y Magister en Docencia Universitaria y Gestión Educativa, por la Universidad Privada de Tacna (Perú), y Bachiller en Humanidades con mención en Lingüística y Literatura, por la Pontificia Universidad Católica del Perú. Ha ejercido docencia en las escuelas de posgrado de la Universidad San Pedro (Perú) y de la Universidad José Carlos Mariátegui (Perú), y ha sido docente en el Programa de Capacitación en Investigación Científica de la Universidad San Pedro (Perú). Ha desarrollado amplios intereses de investigación.</p>
+          <div class="investigador-links">
+            <a href="https://orcid.org/0000-0002-9654-5915" target="_blank">ORCID</a>
+            <a href="https://independent.academia.edu/WilliamCamposLizarzaburu" target="_blank">Academia.edu</a>
+            <a href="https://www.researchgate.net/profile/William_Lizarzaburu" target="_blank">ResearchGate</a>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <div class="footer">
+  <footer class="footer">
     Av. Simón Bolívar 1101, Trujillo - Perú | contacto.imed.peru@gmail.com
-  </div>
+  </footer>
 </body>
 </html>
