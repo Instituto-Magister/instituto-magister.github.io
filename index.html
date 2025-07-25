@@ -1,250 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <title>Instituto Magister de Estudios para el Desarrollo (IMED)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre nosotros - IMED</title>
+  <link rel="stylesheet" href="investigadores.css">
   <style>
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 40px;
-      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
     }
 
-    nav {
-      background-color: #0f5b0d;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
+    .navbar {
+      background-color: #000;
+      overflow: hidden;
     }
 
-    nav a {
-      color: white;
+    .navbar a {
+      float: left;
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .navbar a:hover {
+      background-color: #444;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    header img {
-      height: 120px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    header h1 {
-      color: #0f5b0d;
-      font-size: 28px;
-      margin-top: 15px;
-    }
-
-    section {
-      margin-bottom: 30px;
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: black;
-      border-bottom: 2px solid #0f5b0d;
-      padding-bottom: 5px;
-      font-size: 30px;
-    }
-
-    .h2-secundario {
-      font-size: 24px;
-      color: #0f5b0d;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .actividades-grid {
-      display: flex;
-      gap: 20px;
-      justify-content: space-between;
-      margin-top: 15px;
-    }
-
-    .actividad {
-      flex: 1;
-      text-align: center;
-    }
-
-    .actividad img {
-      width: 100%;
-      height: auto;
-      max-height: 600px;
-      object-fit: contain;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
-    .actividad p strong {
-      display: block;
-      font-size: 20px;
-      color: #0f5b0d;
-      margin-bottom: 6px;
-    }
-
-    .quienes-somos-banner {
-      background-color: #000000;
+    .hero {
+      background-color: #000;
       color: white;
-      padding: 20px;
-      height: 3cm;
+      padding: 40px;
+      text-align: center;
+      font-size: 28px;
+    }
+
+    .contenido {
+      padding: 40px;
+      background-color: white;
+      color: black;
+    }
+
+    .contenido strong {
+      color: #003366;
+    }
+
+    .columnas {
       display: flex;
-      align-items: center;
-      justify-content: flex-start;
+      justify-content: space-between;
       margin-top: 40px;
     }
 
-    .quienes-somos-banner h2 {
-      margin: 0;
-      font-size: 30px;
-      color: white;
-      text-decoration: none;
+    .columna {
+      width: 48%;
     }
 
-    .quienes-somos-texto {
-      font-size: 22px;
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
+    .fundadores {
+      margin-top: 60px;
     }
 
-    .dos-columnas {
+    .fundadores h2 {
+      text-align: center;
+    }
+
+    .fundador-container {
       display: flex;
-      gap: 20px;
-      margin-bottom: 30px;
+      justify-content: space-between;
+      margin-top: 40px;
     }
 
-    .dos-columnas .columna {
-      flex: 1;
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    .fundador-col {
+      width: 48%;
     }
 
     .footer {
-      background-color: #000000;
+      background-color: #000;
       color: white;
-      padding: 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      font-size: 13px;
-    }
-
-    .footer-left {
-      margin-left: 30px;
-      max-width: 50%;
-    }
-
-    .footer-right iframe {
-      border: 0;
-      width: 300px;
-      height: 200px;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
-
-  <header>
-    <img src="IMED.2025.jpg" alt="Logo IMED">
-    <h1>Instituto Magister de Estudios para el Desarrollo (IMED)</h1>
-  </header>
-
-  <nav>
+  <div class="navbar">
     <a href="index.html">Inicio</a>
     <a href="investigacion.html">Investigación</a>
-    <a href="sobre-nosotros.html">Sobre nosotros</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="publicaciones.html">Publicaciones</a>
-    <a href="magister-science-journal.html">Magister Science Journal</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-
-  <section>
-    <h2>Actividades</h2>
-    <div class="actividades-grid">
-      <div class="actividad">
-        <img src="proyectos.jpg" alt="Proyectos de investigación">
-        <p><strong>Proyectos de investigación</strong><br>
-        Desarrollo de estudios interdisciplinarios en ciencias sociales.</p>
-      </div>
-      <div class="actividad">
-        <img src="Imed.Act.02.EAC.jpeg" alt="Taller de artículos científicos">
-        <p><strong>Elaboración del artículo científico: de la investigación a la publicación</strong><br>
-        El IMED presenta este curso dirigido a profesores, investigadores y estudiantes universitarios, e investigadores de centros de investigación, que pretenden adquirir o potenciar competencias investigativas con miras a la publicación de artículos en revistas científicas.</p>
-      </div>
-      <div class="actividad">
-        <img src="Imed.Act.03.MSJ.jpg" alt="Magister Science Journal">
-        <p><strong>Magister Science Journal</strong><br>
-        El IMED convoca a la comunidad académica al envío de artículos científicos en lengua española o inglesa, para la publicación de la revista Magister Science Journal. En esta ocasión la convocatoria corresponde al Volumen 5, No. 1 de nuestra revista.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="quienes-somos-banner">
-    <h2>Quiénes somos</h2>
-  </div>
-  <div class="quienes-somos-texto">
-    <p>El Instituto Magister de Estudios para el Desarrollo (IMED) es un centro de investigación en Ciencias Sociales y disciplinas afines que se orienta al estudio independiente, abierto, plural e interdisciplinario de la sociedad. En el centro de esta reflexión, está la persona humana; por ello, el conocimiento y comprensión de ésta es premisa del conocimiento, comprensión e intervención en la sociedad.</p>
+    <a href="nosotros.html">Sobre nosotros</a>
   </div>
 
-  <div class="dos-columnas">
-    <div class="columna">
-      <h2 class="h2-secundario">Visión</h2>
-      <p>El propósito del IMED es contribuir al estudio y discusión sobre temas de interés para el desarrollo de la persona y su comunidad, como componentes fundamentales de toda sociedad.​</p>
+  <div class="hero">
+    Sobre nosotros
+  </div>
 
-      <h2 class="h2-secundario">Valores Institucionales</h2>
-      <ul>
-        <li>Actitud proactiva</li>
-        <li>Compromiso</li>
-        <li>Honestidad científica</li>
-        <li>Valoración del conocimiento</li>
-      </ul>
+  <div class="contenido">
+    <p><strong>El Instituto Magíster de Estudios para el Desarrollo (IMED)</strong> es una organización dedicada a la investigación científica en diversas disciplinas, con un enfoque interdisciplinario que busca responder a los desafíos sociales, culturales y educativos contemporáneos. Desde su fundación en 2018, el <strong>IMED</strong> ha impulsado el estudio riguroso de fenómenos complejos que afectan a las personas y a sus comunidades, con un compromiso constante con la generación de conocimiento relevante y transformador.</p>
+    <p><strong>El Instituto Magíster de Estudios para el Desarrollo (IMED)</strong> constituye una unidad de investigación y formación no escolarizada dependiente de Magister SAC, empresa orientada, entre otras actividades, a la consultoría e investigación en diferentes disciplinas.</p>
+
+    <div class="columnas">
+      <div class="columna">
+        <h3>Fundación</h3>
+        <p style="margin-top: 24px;"><strong>El Instituto Magíster de Estudios para el Desarrollo (IMED)</strong> se constituyó en abril del 2018, con el objeto de orientar y delinear áreas específicas de investigación social.</p>
+      </div>
+      <div class="columna">
+        <h3>Propósito</h3>
+        <p style="margin-top: 24px;">El propósito del <strong>Instituto Magíster de Estudios para el Desarrollo (IMED)</strong> es contribuir al estudio y discusión sobre temas de interés para el desarrollo de la persona y su comunidad, como componentes fundamentales de toda sociedad.</p>
+      </div>
     </div>
-    <div class="columna">
-      <h2 class="h2-secundario">Misión</h2>
-      <p>Liderar la generación de conocimientos y actividades de descubrimiento e innovación en la construcción permanente del bienestar humano.</p>
 
-      <h2 class="h2-secundario">Nuestra Declaración de Principios</h2>
-      <p>
-        El conocimiento científico de la sociedad es el factor que más contribuye al logro del bienestar humano.<br>
-        Las tradiciones y prácticas supersticiosas e irracionales​ frenan los esfuerzos por alcanzar el bienestar humano.
-      </p>
+    <div class="fundadores">
+      <h2>Fundadores</h2>
+      <div class="fundador-container">
+        <div class="fundador-col">
+          <h4>Fotografía</h4>
+          <p><strong>Britaldo Campos Marín</strong></p>
+          <p>(18 de marzo, 1943 – 26 de mayo, 2021)</p>
+          <p>Don Britaldo Campos fue docente ordinario en la cátedra de Maestro en Ciencias con mención en Física y Licenciado en Física, por la Universidad Nacional de Trujillo, con estudios en Física Experimental Nuclear, en la Universidad de La Plata (Argentina). Fue vicepresidente administrativo y secretario general de la Universidad Privada de Trujillo (Perú) y vicepresidente administrativo y fundador de la Universidad César Vallejo (Perú).</p>
+        </div>
+        <div class="fundador-col">
+          <h4>Imagen</h4>
+          <p><strong>Lidia Marina Lizarzaburu Montero</strong></p>
+          <p>Directora</p>
+          <p>Master en Estadística Matemática, por la Universidad de Chile y el Centro Interamericano de Enseñanza de la Estadística; y Licenciado en Estadística, por la Universidad Nacional de Trujillo (Perú). Doctor Honoris Causa por la Universidad José Carlos Mariátegui y la Universidad San Pedro, Profesor Emérito de la Universidad Nacional de Trujillo y Miembro Honorario del Colegio de Estadísticos del Perú.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fundadores">
+      <h2>Investigadores principales</h2>
+      <!-- AQUÍ INSERTAREMOS EL BLOQUE DE LOS INVESTIGADORES -->
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="footer-left">
-      <p><strong>Instituto Magister de Estudios para el Desarrollo</strong></p>
-      <p>Dirección:<br>Francisco Solano 504A, Dpto. 301<br>Urb. San Andrés, Trujillo, Perú</p>
-      <p>📞 WhatsApp: +51 998060237</p>
-      <p>📧 magisterdevelopmentinstitute@gmail.com</p>
-    </div>
-    <div class="footer-right">
-      <iframe src="https://www.google.com/maps?q=Francisco+Solano+504A,+Trujillo,+Perú&output=embed" allowfullscreen></iframe>
-    </div>
-  </footer>
-
+  <div class="footer">
+    Av. Simón Bolívar 1101, Trujillo - Perú | contacto.imed.peru@gmail.com
+  </div>
 </body>
+
 </html>
