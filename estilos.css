@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* barra de navegación */
+.navbar {
+  background-color: #0f5b0d;
+  overflow: hidden;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover,
+.navbar a.activo {
+  background-color: #0c400a;
+}
+
+/* encabezado */
+.hero {
+  background-color: #0f5b0d;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.contenido {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+.descripcion p,
+.columna p,
+.fundador-col p,
+.investigador-info p {
+  line-height: 1.6;
+}
+
+.columnas {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.columna {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* fundadores */
+.fundadores {
+  margin-top: 60px;
+}
+.fundador-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.fundador-col {
+  flex: 1;
+  min-width: 280px;
+}
+.fundador-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* investigadores */
+.investigadores {
+  margin-top: 60px;
+}
+.investigador {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+.investigador img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.investigador-info {
+  flex: 1;
+  min-width: 300px;
+}
+.investigador-info h4 {
+  margin-top: 0;
+  color: #0f5b0d;
+}
+.investigador-links a {
+  margin-right: 10px;
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+}
+.investigador-links a:hover {
+  text-decoration: underline;
+}
+
+/* pie de página */
+.footer {
+  background-color: #0f5b0d;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+  margin-top: 40px;
+}
