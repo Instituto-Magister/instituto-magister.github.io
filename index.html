@@ -12,17 +12,40 @@
       margin: 0;
       padding: 0;
     }
-    .navbar {
-      display: flex;
-      align-items: center;
-      background-color: rgb(18, 79, 26);
-      padding: 5px 20px;
-      justify-content: space-between;
-    }
-    .logo {
-      width: 53%;
-      max-width: 800px;
-    }
+    .encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  flex: 1;
+  max-width: 33%;
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.barra-navegacion {
+  flex: 2;
+  background-color: rgb(18, 79, 26);
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 10px 15px;
+}
+
+.barra-navegacion a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
     .menu-principal {
       display: flex;
       gap: 16px;
@@ -59,7 +82,7 @@
       transform: translateY(-50%);
     }
     .contenido-principal {
-      font-size: 23px;
+      font-size: 20px;
       color: black;
       margin: 24px auto;
       width: 96%;
@@ -91,8 +114,8 @@
       margin-bottom: 4px;
     }
     .seccion-actividades, .seccion-noticias {
-      margin: 48px auto;
-      width: 92%;
+      margin: 24px auto;
+      width: 96%;
       max-width: 1400px;
     }
     .subtitulo-negro {
@@ -126,7 +149,7 @@
       text-align: center;
       font-style: italic;
       color: #555;
-      font-size: 19px;
+      font-size: 24px;
       margin: 40px 0;
     }
     .footer {
@@ -169,17 +192,19 @@
 </head>
 
 <body>
-  <header class="navbar">
-    <img src="IMED.2025.jpg" alt="Logo IMED" class="logo" />
-    <nav class="menu-principal">
-      <a href="index.html">Inicio</a>
-      <a href="investigacion.html">Investigación</a>
-      <a href="nosotros.html">Sobre nosotros</a>
-      <a href="publicaciones.html">Publicaciones</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="magister-science-journal.html">Magister Science Journal</a>
-    </nav>
-  </header>
+  <header class="encabezado">
+  <div class="logo-container">
+    <img src="IMED.2025.jpg" alt="Logo IMED" />
+  </div>
+  <nav class="barra-navegacion">
+    <a href="index.html">INICIO</a>
+    <a href="investigacion.html">INVESTIGACIÓN</a>
+    <a href="nosotros.html">SOBRE NOSOTROS</a>
+    <a href="contacto.html">CONTACTO</a>
+    <a href="magister-science-journal.html">MAGISTER SCIENCE JOURNAL</a>
+  </nav>
+</header>
+
 
   <h1 class="titulo-principal">Instituto Magister de Estudios para el Desarrollo</h1>
 
