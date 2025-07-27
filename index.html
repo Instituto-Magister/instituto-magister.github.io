@@ -48,13 +48,23 @@
 
     .menu-principal {
   display: flex;
-  gap: 16px;
-  width: 45%; /* O el valor que estés usando */
   justify-content: flex-end;
-  align-items: flex-start;
+  width: 54%;
 }
 
-.menu-principal a {
+.menu-horizontal {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+}
+
+.menu-horizontal li {
+  position: relative;
+}
+
+.menu-horizontal a {
   color: white;
   text-decoration: none;
   font-size: 14px;
@@ -65,17 +75,27 @@
 }
 
 .submenu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(18, 79, 26);
+  padding: 4px 0;
+  min-width: 120px;
 }
 
-.submenu-item {
-  font-size: 12px;
-  font-weight: normal;
-  text-transform: none;
-  padding-left: 10px;
+.submenu li {
+  margin: 0;
 }
+
+.submenu a {
+  font-size: 13px;
+  text-transform: none;
+  padding: 6px 12px;
+  display: block;
+  white-space: nowrap;
+}
+
 
     .titulo-principal {
       text-align: center;
@@ -214,16 +234,21 @@
     <img src="IMED.2025.jpg" alt="Logo IMED" />
   </div>
   <nav class="menu-principal">
-  <a href="index.html">Inicio</a>
-  <a href="investigacion.html">Investigación</a>
-  <a href="nosotros.html">Sobre nosotros</a>
-  <a href="publicaciones.html">Publicaciones</a>
-  <a href="magister-science-journal.html">Magister Science Journal</a>
-  <div class="submenu">
-    <a href="servicios.html">Servicios</a>
-    <a href="contacto.html" class="submenu-item">Contacto</a>
-  </div>
+  <ul class="menu-horizontal">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="investigacion.html">Investigación</a></li>
+    <li><a href="nosotros.html">Sobre nosotros</a></li>
+    <li><a href="publicaciones.html">Publicaciones</a></li>
+    <li><a href="magister-science-journal.html">Magister Science Journal</a></li>
+    <li class="menu-servicios">
+      <a href="servicios.html">Servicios</a>
+      <ul class="submenu">
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
+
 
 </header>
 
