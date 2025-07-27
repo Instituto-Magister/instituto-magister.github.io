@@ -47,19 +47,36 @@
 }
 
     .menu-principal {
-      display: flex;
-      gap: 16px;
-      width: 54%;
-      justify-content: flex-end;
-    }
-    .menu-principal a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: bold;
-      text-transform: uppercase;
-      padding: 10px;
-    }
+  display: flex;
+  gap: 16px;
+  width: 45%; /* O el valor que estés usando */
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.menu-principal a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  display: inline-block;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.submenu-item {
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: none;
+  padding-left: 10px;
+}
+
     .titulo-principal {
       text-align: center;
       font-size: 32px;
