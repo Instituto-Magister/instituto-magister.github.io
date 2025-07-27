@@ -17,27 +17,29 @@
       align-items: center;
       background-color: rgb(18, 79, 26);
       padding: 5px 20px;
+      justify-content: space-between;
     }
     .logo {
-      width: 25%;
-      max-width: 200px;
+      width: 20%;
+      max-width: 280px;
     }
     .menu-principal {
-      margin-left: auto;
       display: flex;
       gap: 16px;
+      width: 66.66%;
+      justify-content: flex-end;
     }
     .menu-principal a {
       color: white;
       text-decoration: none;
-      font-size: 17px;
+      font-size: 14px;
       font-weight: bold;
       text-transform: uppercase;
       padding: 10px;
     }
     .titulo-principal {
       text-align: center;
-      font-size: 35px;
+      font-size: 32px;
       font-weight: bold;
       color: rgb(18, 79, 26);
       margin: 32px 0 16px;
@@ -45,7 +47,7 @@
     .cinta-negra {
       background-color: black;
       color: white;
-      font-size: 32px;
+      font-size: 35px;
       font-weight: bold;
       padding: 36px 0;
       position: relative;
@@ -61,7 +63,7 @@
       color: black;
       margin: 24px auto;
       width: 90%;
-      max-width: 1000px;
+      max-width: 1200px;
       text-align: justify;
     }
     .contenido-principal strong {
@@ -69,7 +71,7 @@
     }
     .subtitulo-verde {
       color: rgb(18, 79, 26);
-      font-size: 32px;
+      font-size: 28px;
       font-weight: bold;
       margin-top: 24px;
     }
@@ -103,10 +105,10 @@
       height: auto;
     }
     .columna p {
-      font-size: 24px;
+      font-size: 21px;
     }
     .columna .titulo-columna {
-      font-size: 24px;
+      font-size: 18px;
       font-weight: bold;
       color: rgb(18, 79, 26);
       margin-top: 8px;
@@ -115,20 +117,27 @@
       text-align: center;
       font-style: italic;
       color: #555;
-      font-size: 32px;
+      font-size: 31px;
       margin: 40px 0;
     }
     .footer {
       background-color: black;
       color: white;
       padding: 24px;
-      font-size: 21px;
-      text-align: center;
+      font-size: 14px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
     .footer img {
       vertical-align: middle;
       width: 16px;
       height: 16px;
+    }
+    .footer .mapa {
+      flex: 1;
+      margin-left: 20px;
     }
   </style>
 </head>
@@ -147,77 +156,79 @@
   </header>
 
   <h1 class="titulo-principal">Instituto Magíster de Estudios para el Desarrollo</h1>
+  <div class="cinta-negra"><span>Quiénes somos</span></div>
 
-  <div class="cinta-negra">
-    <span>Quiénes somos</span>
-  </div>
-
-  <div class="contenido-principal">
+  <section class="contenido-principal">
     <p>El <strong>Instituto Magíster de Estudios para el Desarrollo (IMED)</strong> es un centro de investigación en Ciencias Sociales y disciplinas afines que se orienta al estudio independiente, abierto, plural e interdisciplinario de la sociedad. En el centro de esta reflexión, está la persona humana; por ello, el conocimiento y comprensión de ésta es premisa del conocimiento, comprensión e intervención en la sociedad.</p>
 
-    <div class="subtitulo-verde">Visión</div>
-    <p style="margin-left: 1cm;">Liderar la generación de conocimientos y actividades de descubrimiento e innovación en la construcción permanente del bienestar humano.</p>
+    <div style="display: flex; gap: 40px;">
+      <div style="flex: 1;">
+        <h2 class="subtitulo-verde">Visión</h2>
+        <p>Liderar la generación de conocimientos y actividades de descubrimiento e innovación en la construcción permanente del bienestar humano.</p>
 
-    <div class="subtitulo-verde">Misión</div>
-    <p style="margin-left: 1cm;">El <strong>IMED</strong> contribuye al estudio y discusión de temas de interés para el desarrollo de la persona y su comunidad, como componentes fundamentales de toda sociedad.</p>
+        <h2 class="subtitulo-verde">Valores institucionales</h2>
+        <div class="valores">
+          <ul>
+            <li>Actitud proactiva</li>
+            <li>Compromiso</li>
+            <li>Honestidad científica</li>
+            <li>Valoración del conocimiento</li>
+          </ul>
+        </div>
+      </div>
+      <div style="flex: 1;">
+        <h2 class="subtitulo-verde">Misión</h2>
+        <p>El <strong>IMED</strong> contribuye al estudio y discusión de temas de interés para el desarrollo de la persona y su comunidad, como componentes fundamentales de toda sociedad.</p>
 
-    <div class="subtitulo-verde">Valores institucionales</div>
-    <div class="valores" style="margin-left: 1cm;">
-      <ul>
-        <li>Actitud proactiva</li>
-        <li>Compromiso</li>
-        <li>Honestidad científica</li>
-        <li>Valoración del conocimiento</li>
-      </ul>
+        <h2 class="subtitulo-verde">Nuestra declaración de principios</h2>
+        <p>El conocimiento científico de la sociedad es el factor que más contribuye al logro del bienestar humano.<br />
+        Las tradiciones y prácticas supersticiosas e irracionales frenan los esfuerzos por alcanzar el bienestar humano.</p>
+      </div>
     </div>
-
-    <div class="subtitulo-verde">Nuestra declaración de principios</div>
-    <p style="margin-left: 1cm;">El conocimiento científico de la sociedad es el factor que más contribuye al logro del bienestar humano.</p>
-    <p style="margin-left: 1cm;">Las tradiciones y prácticas supersticiosas e irracionales frenan los esfuerzos por alcanzar el bienestar humano.</p>
-  </div>
+  </section>
 
   <section class="seccion-actividades">
-    <div class="subtitulo-negro">Actividades</div>
+    <h2 class="subtitulo-negro">Actividades</h2>
     <div class="columnas-imagenes">
       <div class="columna">
-        <img src="imagen1.jpg" alt="Proyectos de investigación" />
-        <p class="titulo-columna">Proyectos de investigación</p>
+        <img src="actividad1.jpg" alt="Proyectos de investigación" />
+        <div class="titulo-columna">Proyectos de investigación</div>
       </div>
       <div class="columna">
-        <img src="Imed.Act.02.EAC.jpeg" alt="Curso artículo científico" />
-        <p class="titulo-columna">Elaboración del artículo científico: de la investigación a la publicación</p>
+        <img src="Imed.Act.02.EAC.jpeg" alt="Formando investigadores" />
+        <div class="titulo-columna">Formando investigadores</div>
         <p>El <strong>IMED</strong> presenta este curso permanente dirigido a profesores, investigadores y estudiantes universitarios, e investigadores de centros de investigación, que pretenden adquirir o potenciar competencias investigativas con miras a la publicación de artículos en revistas científicas.</p>
-        <p>Modalidad virtual.</p>
-        <p>Mayor información: <a href="servicios.html">Servicios</a><br />Escríbenos: magisterdevelopmentinstitute@gmail.com<br />Comunícate: WhatsApp +51 998 060 237</p>
+        <p>Modalidad virtual.<br />
+        Mayor información: <a href="servicios.html">Servicios</a><br />
+        Escríbenos: magisterdevelopmentinstitute@gmail.com<br />
+        Comunícate: WhatsApp +51 998 060 237</p>
       </div>
       <div class="columna">
         <img src="Imed.Act.03.MSJ.jpg" alt="Magister Science Journal" />
-        <p class="titulo-columna">Magister Science Journal</p>
+        <div class="titulo-columna">Magister Science Journal</div>
         <p>El <strong>IMED</strong> convoca a la comunidad académica al envío de artículos científicos en lengua española o inglesa, para la publicación de la revista <strong>Magister Science Journal</strong>. En esta ocasión la convocatoria corresponde al Volumen 5, No. 1 de nuestra revista.</p>
-        <p>Mayor información: <a href="magister-science-journal.html">Magister Science Journal</a><br />Contacto y envíos: lizarzaburulidiamarina@gmail.com</p>
+        <p>Mayor información: <a href="magister-science-journal.html">Magister Science Journal</a><br />
+        Contacto y envíos: lizarzaburulidiamarina@gmail.com</p>
       </div>
     </div>
   </section>
 
   <section class="seccion-noticias">
-    <div class="subtitulo-negro">Noticias</div>
-    <div class="columnas-imagenes">
-      <div class="columna">
-        <img src="noticia1.jpg" alt="Noticia 1" />
-      </div>
-      <div class="columna">
-        <img src="noticia2.jpg" alt="Noticia 2" />
-      </div>
-      <div class="columna">
-        <img src="noticia3.jpg" alt="Noticia 3" />
-      </div>
-    </div>
+    <h2 class="subtitulo-negro">Noticias</h2>
+    <p class="frase-final">El conocimiento es el más sólido pilar de la intervención social</p>
   </section>
 
-  <p class="frase-final">El conocimiento es el más sólido pilar de la intervención social</p>
-
   <footer class="footer">
-    <p><strong>Instituto Magíster de Estudios para el Desarrollo</strong></p>
-    <p>Francisco Solano 504 A, Dpto. 301<br />Urb. San Andrés<br />Trujillo, Perú</p>
-    <p><img src="whatsapp-icon.png" alt="WhatsApp"> +51 998060237</p>
-    <p>magister
+    <div>
+      <p><strong>Instituto Magíster de Estudios para el Desarrollo</strong></p>
+      <p>Francisco Solano 504 A, Dpto. 301<br />Urb. San Andrés<br />Trujillo, Perú</p>
+      <p><img src="whatsapp-icon.png" alt="WhatsApp"> +51 998060237</p>
+      <p>magisterdevelopmentinstitute@gmail.com</p>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.493689952219!2d-79.032426!3d-13.530029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3cd6fddecc9d%3A0x1f6df3c70bc6f379!2sTrujillo%2C%20Peru!5e0!3m2!1ses-419!2spe!4v1624132938359!5m2!1ses-419!2spe" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </footer>
+</body>
+
+</html>
