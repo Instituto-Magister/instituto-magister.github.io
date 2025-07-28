@@ -14,8 +14,8 @@
     }
     .encabezado {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
 }
 
@@ -29,55 +29,37 @@
   height: auto;
 }
 
-.menu-principal {
-  flex: 1;
+.barra-navegacion {
+  flex: 2;
+  background-color: rgb(18, 79, 26);
   display: flex;
   justify-content: flex-end;
+  gap: 20px;
+  padding: 10px 15px;
 }
 
-.menu-horizontal {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-horizontal li {
-  position: relative;
-}
-
-.menu-horizontal a {
+.barra-navegacion a {
   color: white;
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 10px;
-  background-color: rgb(18, 79, 26); /* fondo verde institucional */
-  display: block;
 }
 
-.menu-servicios .submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgb(18, 79, 26);
-  z-index: 1000;
-}
-
-.menu-servicios:hover .submenu {
-  display: block;
-}
-
-.submenu li a {
-  font-size: 13px;
-  padding: 8px 12px;
-}
-
-
+    .menu-principal {
+      display: flex;
+      gap: 16px;
+      width: 66.66%;
+      justify-content: flex-end;
+    }
+    .menu-principal a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 10px;
+    }
     .titulo-principal {
       text-align: center;
       font-size: 32px;
@@ -214,20 +196,12 @@
   <div class="logo-container">
     <img src="IMED.2025.jpg" alt="Logo IMED" />
   </div>
-  <nav class="menu-principal">
-    <ul class="menu-horizontal">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="investigacion.html">Investigación</a></li>
-      <li><a href="nosotros.html">Sobre nosotros</a></li>
-      <li><a href="publicaciones.html">Publicaciones</a></li>
-      <li><a href="magister-science-journal.html">Magister Science Journal</a></li>
-      <li class="menu-servicios">
-        <a href="servicios.html">Servicios</a>
-        <ul class="submenu">
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </li>
-    </ul>
+  <nav class="barra-navegacion">
+    <a href="index.html">INICIO</a>
+    <a href="investigacion.html">INVESTIGACIÓN</a>
+    <a href="nosotros.html">SOBRE NOSOTROS</a>
+    <a href="contacto.html">CONTACTO</a>
+    <a href="magister-science-journal.html">MAGISTER SCIENCE JOURNAL</a>
   </nav>
 </header>
 
