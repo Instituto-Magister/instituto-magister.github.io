@@ -12,54 +12,72 @@
       margin: 0;
       padding: 0;
     }
+
     .encabezado {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
 
-.logo-container {
-  flex: 1;
-  max-width: 33%;
-}
+    .logo-container {
+      flex: 1;
+      max-width: 25%;
+    }
 
-.logo-container img {
-  max-width: 100%;
-  height: auto;
-}
-
-.barra-navegacion {
-  flex: 2;
-  background-color: rgb(18, 79, 26);
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  padding: 10px 15px;
-}
-
-.barra-navegacion a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
+    .logo-container img {
+      max-width: 100%;
+      height: auto;
+    }
 
     .menu-principal {
+      flex: 1;
       display: flex;
-      gap: 16px;
-      width: 66.66%;
       justify-content: flex-end;
     }
-    .menu-principal a {
+
+    .menu-horizontal {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-horizontal li {
+      position: relative;
+    }
+
+    .menu-horizontal a {
       color: white;
       text-decoration: none;
       font-size: 14px;
       font-weight: bold;
       text-transform: uppercase;
       padding: 10px;
+      background-color: rgb(18, 79, 26);
+      display: block;
     }
+
+    .menu-servicios .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(18, 79, 26);
+      z-index: 1000;
+    }
+
+    .menu-servicios:hover .submenu {
+      display: block;
+    }
+
+    .submenu li a {
+      font-size: 13px;
+      padding: 8px 12px;
+    }
+
     .titulo-principal {
       text-align: center;
       font-size: 32px;
@@ -67,6 +85,7 @@
       color: rgb(18, 79, 26);
       margin: 32px 0 16px;
     }
+
     .cinta-negra {
       background-color: black;
       color: white;
@@ -75,83 +94,100 @@
       padding: 36px 0;
       position: relative;
     }
+
     .cinta-negra span {
       position: absolute;
       left: 48px;
       top: 50%;
       transform: translateY(-50%);
     }
+
     .contenido-principal {
-      font-size: 20px;
+      font-size: 23px;
       color: black;
       margin: 24px auto;
       width: 96%;
       max-width: 1400px;
       text-align: justify;
     }
+
     .contenido-principal strong {
       color: rgb(18, 79, 26);
     }
+
     .contenido-flex {
       display: flex;
       justify-content: space-between;
       gap: 32px;
     }
+
     .contenido-flex .bloque {
       flex: 1;
     }
+
     .subtitulo-verde {
       color: rgb(18, 79, 26);
       font-size: 28px;
       font-weight: bold;
       margin-top: 24px;
     }
+
     .valores ul {
       list-style-type: none;
       padding-left: 20px;
     }
+
     .valores li {
       margin-bottom: 4px;
     }
+
     .seccion-actividades, .seccion-noticias {
-      margin: 24px auto;
-      width: 96%;
+      margin: 48px auto;
+      width: 92%;
       max-width: 1400px;
     }
+
     .subtitulo-negro {
       font-size: 28px;
       font-weight: bold;
       color: black;
       margin-bottom: 16px;
     }
+
     .columnas-imagenes {
       display: flex;
       gap: 16px;
     }
+
     .columna {
       flex: 1;
     }
+
     .columna img {
       width: 100%;
       height: auto;
     }
+
     .columna p {
-      font-size: 16px;
-      line-height: 1.3;
+      font-size: 20px;
+      line-height: 1.4;
     }
+
     .columna .titulo-columna {
-      font-size: 23px;
+      font-size: 20px;
       font-weight: bold;
       color: rgb(18, 79, 26);
       margin-top: 8px;
     }
+
     .frase-final {
       text-align: center;
       font-style: italic;
       color: #555;
-      font-size: 24px;
+      font-size: 26px;
       margin: 40px 0;
     }
+
     .footer {
       background-color: black;
       color: white;
@@ -162,25 +198,30 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
+
     .footer .info {
       flex: 1;
     }
+
     .footer .mapa {
       flex: 1;
       display: flex;
       justify-content: flex-end;
     }
+
     .footer img {
       vertical-align: middle;
       width: 16px;
       height: 16px;
     }
+
     .cajas-noticias {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
       justify-content: space-between;
     }
+
     .caja-noticia {
       background-color: #f0f0f0;
       padding: 16px;
@@ -193,18 +234,25 @@
 
 <body>
   <header class="encabezado">
-  <div class="logo-container">
-    <img src="IMED.2025.jpg" alt="Logo IMED" />
-  </div>
-  <nav class="barra-navegacion">
-    <a href="index.html">INICIO</a>
-    <a href="investigacion.html">INVESTIGACIÓN</a>
-    <a href="nosotros.html">SOBRE NOSOTROS</a>
-    <a href="contacto.html">CONTACTO</a>
-    <a href="magister-science-journal.html">MAGISTER SCIENCE JOURNAL</a>
-  </nav>
-</header>
-
+    <div class="logo-container">
+      <img src="IMED.2025.jpg" alt="Logo IMED" />
+    </div>
+    <nav class="menu-principal">
+      <ul class="menu-horizontal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="investigacion.html">Investigación</a></li>
+        <li><a href="nosotros.html">Sobre nosotros</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+        <li><a href="magister-science-journal.html">Magister Science Journal</a></li>
+        <li class="menu-servicios">
+          <a href="servicios.html">Servicios</a>
+          <ul class="submenu">
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
   <h1 class="titulo-principal">Instituto Magister de Estudios para el Desarrollo</h1>
 
@@ -212,13 +260,11 @@
 
   <div class="contenido-principal">
     <p>El <strong>Instituto Magister de Estudios para el Desarrollo</strong> (IMED) es un centro de investigación en Ciencias Sociales y disciplinas afines que se orienta al estudio independiente, abierto, plural e interdisciplinario de la sociedad. En el centro de esta reflexión, está la persona humana; por ello, el conocimiento y comprensión de ésta es premisa del conocimiento, comprensión e intervención en la sociedad.</p>
-
     <div class="contenido-flex">
       <div class="bloque">
-        <div class="subtitulo-verde">Visión</div>
+        <h2 class="subtitulo-verde">Visión</h2>
         <p>Liderar la generación de conocimientos y actividades de descubrimiento e innovación en la construcción permanente del bienestar humano.</p>
-
-        <div class="subtitulo-verde">Valores institucionales</div>
+        <h2 class="subtitulo-verde">Valores institucionales</h2>
         <div class="valores">
           <ul>
             <li>Actitud proactiva</li>
@@ -229,80 +275,63 @@
         </div>
       </div>
       <div class="bloque">
-        <div class="subtitulo-verde">Misión</div>
-        <p>El <strong>IMED</strong> contribuye al estudio y discusión de temas de interés para el desarrollo de la persona y su comunidad, como componentes fundamentales de toda sociedad.</p>
-
-        <div class="subtitulo-verde">Nuestra declaración de principios</div>
-        <p>El conocimiento científico de la sociedad es el factor que más contribuye al logro del bienestar humano.<br>
-        Las tradiciones y prácticas supersticiosas e irracionales frenan los esfuerzos por alcanzar el bienestar humano.</p>
+        <h2 class="subtitulo-verde">Misión</h2>
+        <p>El IMED contribuye al estudio y discusión de temas de interés para el desarrollo de la persona y su comunidad, como componentes fundamentales de toda sociedad.</p>
+        <h2 class="subtitulo-verde">Nuestra declaración de principios</h2>
+        <p>El conocimiento científico de la sociedad es el factor que más contribuye al logro del bienestar humano. Las tradiciones y prácticas supersticiosas e irracionales frenan los esfuerzos por alcanzar el bienestar humano.</p>
       </div>
     </div>
   </div>
 
-  <div class="seccion-actividades">
-    <div class="subtitulo-negro">Actividades</div>
+  <section class="seccion-actividades">
+    <h2 class="subtitulo-negro">Actividades</h2>
     <div class="columnas-imagenes">
       <div class="columna">
-        <img src="Imed.Act.01.PI.jpg" alt="Actividad 1">
-        <div class="titulo-columna">Proyectos de investigación</div>
+        <img src="actividad1.jpg" alt="Actividad 1">
+        <p class="titulo-columna">Proyectos de investigación</p>
       </div>
       <div class="columna">
-        <img src="Imed.Act.02.EAC.jpeg" alt="Actividad 2">
-        <div class="titulo-columna">Formando investigadores</div>
-        <p>El <strong>IMED</strong> presenta este curso permanente dirigido a profesores, investigadores y estudiantes universitarios, e investigadores de centros de investigación, que pretenden adquirir o potenciar competencias investigativas con miras a la publicación de artículos en revistas científicas.</p>
-        <p>Modalidad virtual.<br>
-        Mayor información:<br>
-        <a href="servicios.html">Servicios</a><br>
-        Escríbenos: magisterdevelopmentinstitute@gmail.com<br>
-        Comunícate: WhatsApp +51 998 060 237</p>
+        <img src="Imed.Act.02.EAC.jpeg" alt="Formando investigadores">
+        <p class="titulo-columna">Formando investigadores</p>
+        <p>El IMED presenta este curso permanente dirigido a profesores, investigadores y estudiantes universitarios, e investigadores de centros de investigación, que pretenden adquirir o potenciar competencias investigativas con miras a la publicación de artículos en revistas científicas.</p>
+        <p>Modalidad virtual.</p>
+        <p>Mayor información: <a href="servicios.html">Servicios</a> | Escríbenos: magisterdevelopmentinstitute@gmail.com | WhatsApp: +51 998 060 237</p>
       </div>
       <div class="columna">
-        <img src="Imed.Act.03.MSJ.jpg" alt="Actividad 3">
-        <div class="titulo-columna">Magister Science Journal</div>
-        <p>El <strong>IMED</strong> convoca a la comunidad académica al envío de artículos científicos en lengua española o inglesa, para la publicación de la revista Magister Science Journal. En esta ocasión la convocatoria corresponde al Volumen 5, No. 1 de nuestra revista.</p>
-        <p>Mayor información:<br>
-        <a href="magister-science-journal.html">Magister Science Journal</a><br>
-        Contacto y envíos:<br>
-        lizarzaburulidiamarina@gmail.com</p>
+        <img src="Imed.Act.03.MSJ.jpg" alt="Magister Science Journal">
+        <p class="titulo-columna">Magister Science Journal</p>
+        <p>El IMED convoca a la comunidad académica al envío de artículos científicos en lengua española o inglesa, para la publicación de la revista Magister Science Journal. En esta ocasión la convocatoria corresponde al Volumen 5, No. 1 de nuestra revista.</p>
+        <p>Mayor información: <a href="magister-science-journal.html">Magister Science Journal</a><br>Contacto y envíos: lizarzaburulidiamarina@gmail.com</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="seccion-noticias">
-    <div class="subtitulo-negro">Noticias</div>
+  <section class="seccion-noticias">
+    <h2 class="subtitulo-negro">Noticias</h2>
     <div class="cajas-noticias">
-      <div class="caja-noticia"></div>
-      <div class="caja-noticia"></div>
-      <div class="caja-noticia"></div>
-      <div class="caja-noticia"></div>
-      <div class="caja-noticia"></div>
-      <div class="caja-noticia"></div>
+      <div class="caja-noticia">Noticia 1</div>
+      <div class="caja-noticia">Noticia 2</div>
+      <div class="caja-noticia">Noticia 3</div>
+      <div class="caja-noticia">Noticia 4</div>
+      <div class="caja-noticia">Noticia 5</div>
+      <div class="caja-noticia">Noticia 6</div>
     </div>
-  </div>
+  </section>
 
   <div class="frase-final">El conocimiento es el más sólido pilar de la intervención social</div>
 
   <footer class="footer">
     <div class="info">
       <p><strong>Instituto Magister de Estudios para el Desarrollo</strong></p>
-      <p>Francisco Solano 504 A, Dpto. 301<br />Urb. San Andrés<br />Trujillo, Perú</p>
+      <p>Francisco Solano 504 A, Dpto. 301<br>Urb. San Andrés<br>Trujillo, Perú</p>
       <p><img src="whatsapp-icon.png" alt="WhatsApp"> +51 998060237</p>
       <p>magisterdevelopmentinstitute@gmail.com</p>
     </div>
     <div class="mapa">
-      <div class="mapa">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.844241524369!2d-79.04040442560328!3d-8.11733689191199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d7594891197%3A0xf5213744e57e652e!2sCalle%20Francisco%20Solano%20504%2C%20Trujillo%2013008!5e0!3m2!1ses!2spe!4v1753656560619!5m2!1ses!2spe" 
-    width="300" 
-    height="200" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.844241524369!2d-79.04040442560328!3d-8.11733689191199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d7594891197%3A0xf5213744e57e652e!2sCalle%20Francisco%20Solano%20504%2C%20Trujillo%2013008!5e0!3m2!1ses!2spe!4v1753656560619!5m2!1ses!2spe" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </footer>
+
 </body>
 
 </html>
