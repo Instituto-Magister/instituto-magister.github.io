@@ -122,3 +122,51 @@ body {
   font-size: 14px;
   margin-top: 40px;
 }
+/* ESTILOS PARA INVESTIGADORES - ESTRUCTURA VERTICAL */
+.investigador-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.investigador-foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(18, 79, 26);
+}
+
+.investigador-info {
+    flex: 1;
+}
+
+.investigador-info h3 {
+    color: rgb(18, 79, 26);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.investigador-info p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .investigador-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .investigador-foto img {
+        width: 120px;
+        height: 120px;
+    }
+}
