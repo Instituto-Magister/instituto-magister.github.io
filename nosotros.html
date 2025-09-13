@@ -1,123 +1,383 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre nosotros - IMED</title>
+  <title>Sobre Nosotros - Instituto Magister de Estudios para el Desarrollo</title>
   <link rel="stylesheet" href="estilos.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .encabezado {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .logo-container {
+      flex: 1;
+      max-width: 22%;
+    }
+
+    .logo-container img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .menu-principal {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .menu-horizontal {
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(18, 79, 26);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .menu-horizontal a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: lowercase;
+      padding: 12px 16px;
+      display: block;
+    }
+
+    .menu-servicios .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(18, 79, 26);
+      z-index: 1000;
+    }
+
+    .menu-servicios:hover .submenu {
+      display: block;
+    }
+
+    .submenu li a {
+      font-size: 13px;
+      padding: 8px 12px;
+    }
+
+    .titulo-principal {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: rgb(18, 79, 26);
+      margin: 32px 0 16px;
+    }
+
+    .cinta-negra {
+      background-color: black;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 36px 0;
+      position: relative;
+    }
+
+    .cinta-negra span {
+      position: absolute;
+      left: 48px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .contenido-principal {
+      font-size: 23px;
+      color: black;
+      margin: 24px auto;
+      width: 96%;
+      max-width: 1400px;
+      text-align: justify;
+    }
+
+    .contenido-principal strong {
+      color: rgb(18, 79, 26);
+    }
+
+    .contenido-flex {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .contenido-flex .bloque {
+      flex: 1;
+    }
+
+    .subtitulo-verde {
+      color: rgb(18, 79, 26);
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 24px;
+    }
+
+    .valores ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+
+    .valores li {
+      margin-bottom: 4px;
+    }
+
+    .seccion-fundadores, .seccion-investigadores {
+      margin: 48px auto;
+      width: 92%;
+      max-width: 1400px;
+    }
+
+    .subtitulo-negro {
+      font-size: 28px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 16px;
+    }
+
+    .columnas-fundadores {
+      display: flex;
+      gap: 32px;
+      margin-top: 24px;
+    }
+
+    .columna-fundador {
+      flex: 1;
+      background-color: #f8f9fa;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    .columna-fundador h3 {
+      color: rgb(18, 79, 26);
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    .fecha-fundador {
+      color: #666;
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    .cargo-fundador {
+      color: rgb(18, 79, 26);
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .grid-investigadores {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .caja-investigador {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .caja-investigador h3 {
+      color: rgb(18, 79, 26);
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .badges {
+      margin-top: 16px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background-color: rgb(18, 79, 26);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .footer {
+      background-color: black;
+      color: white;
+      padding: 24px;
+      font-size: 14px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer .info {
+      flex: 1;
+    }
+
+    .footer .mapa {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .footer img {
+      vertical-align: middle;
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contenido-flex {
+        flex-direction: column;
+      }
+      
+      .columnas-fundadores {
+        flex-direction: column;
+      }
+      
+      .grid-investigadores {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <header class="navbar">
-    <a href="index.html">Inicio</a>
-    <a href="investigacion.html">Investigación</a>
-    <a href="nosotros.html" class="activo">Sobre nosotros</a>
+  <header class="encabezado">
+    <div class="logo-container">
+      <img src="IMED.2025.jpg" alt="Logo IMED" />
+    </div>
+    <nav class="menu-principal">
+      <ul class="menu-horizontal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="investigacion.html">Investigación</a></li>
+        <li><a href="nosotros.html" class="active">Sobre nosotros</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+        <li><a href="magister-science-journal.html">Magister Science Journal</a></li>
+        <li class="menu-servicios">
+          <a href="servicios.html">Servicios</a>
+          <ul class="submenu">
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="hero">
-    <h1>Sobre nosotros</h1>
+  <h1 class="titulo-principal">Sobre Nosotros</h1>
+
+  <div class="cinta-negra"><span>Nuestra Historia</span></div>
+
+  <div class="contenido-principal">
+    <p>El <strong>Instituto Magister de Estudios para el Desarrollo</strong> (IMED) es una organización dedicada a la investigación científica en diversas disciplinas, con un enfoque interdisciplinario que busca responder a los desafíos sociales, culturales y educativos contemporáneos.</p>
+  </div>
+
+  <section class="seccion-fundadores">
+    <h2 class="subtitulo-negro">Fundadores</h2>
+    <div class="columnas-fundadores">
+      <div class="columna-fundador">
+        <h3>Britaldo Campos Marín</h3>
+        <p class="fecha-fundador">(18 de marzo, 1943 – 26 de mayo, 2021)</p>
+        <p>Don Britaldo Campos fue docente ordinario en la cátedra de Maestro en Ciencias con mención en Física y Licenciado en Física, por la Universidad Nacional de Trujillo, con estudios en Física Experimental Nuclear, en la Universidad de La Plata (Argentina).</p>
+      </div>
+      <div class="columna-fundador">
+        <h3>Lidia Marina Lizarzaburu Montero</h3>
+        <p class="cargo-fundador">Directora</p>
+        <p>Master en Estadística Matemática, por la Universidad de Chile y el Centro Interamericano de Enseñanza de la Estadística. Lidera los proyectos de investigación y la dirección académica del instituto.</p>
+      </div>
+    </div>
   </section>
 
-  <main class="contenido">
-    <section class="descripcion">
-      <p><strong>El Instituto Magíster de Estudios para el Desarrollo (IMED)</strong> es una organización dedicada a la investigación científica en diversas disciplinas, con un enfoque interdisciplinario que busca responder a los desafíos sociales, culturales y educativos contemporáneos. Desde su fundación en 2018, el <strong>IMED</strong> ha impulsado el estudio riguroso de fenómenos complejos que afectan a las personas y a sus comunidades, con un compromiso constante con la generación de conocimiento relevante y transformador.</p>
-      <p><strong>El Instituto Magíster de Estudios para el Desarrollo (IMED)</strong> constituye una unidad de investigación y formación no escolarizada dependiente de Magister SAC, empresa orientada, entre otras actividades, a la consultoría e investigación en diferentes disciplinas.</p>
-    </section>
-
-    <section class="columnas">
-      <div class="columna">
-        <h2>Fundación</h2>
-        <p>El Instituto Magíster de Estudios para el Desarrollo (IMED) se constituyó en abril del 2018, con el objeto de orientar y delinear áreas específicas de investigación social.</p>
-      </div>
-      <div class="columna">
-        <h2>Propósito</h2>
-        <p>El propósito del IMED es contribuir al estudio y discusión sobre temas de interés para el desarrollo de la persona y su comunidad, como componentes fundamentales de toda sociedad.</p>
-      </div>
-    </section>
-
-    <section class="fundadores">
-      <h2>Fundadores</h2>
-      <div class="fundador-container">
-        <div class="fundador-col">
-          <img src="img/Imed.05.BCM.jpg" alt="Britaldo Campos Marín" class="fundador-img" />
-          <h3>Britaldo Campos Marín</h3>
-          <p>(18 de marzo, 1943 – 26 de mayo, 2021)</p>
-          <p>Don Britaldo Campos fue docente ordinario en la cátedra de Maestro en Ciencias con mención en Física y Licenciado en Física, por la Universidad Nacional de Trujillo, con estudios en Física Experimental Nuclear, en la Universidad de La Plata (Argentina). Fue vicepresidente administrativo y secretario general de la Universidad Privada de Trujillo (Perú) y vicepresidente administrativo y fundador de la Universidad César Vallejo (Perú).</p>
-        </div>
-        <div class="fundador-col">
-          <img src="img/Imed.06.LMLM.jpg" alt="Lidia Marina Lizarzaburu Montero" class="fundador-img" />
-          <h3>Lidia Marina Lizarzaburu Montero</h3>
-          <p>Directora</p>
-          <p>Master en Estadística Matemática, por la Universidad de Chile y el Centro Interamericano de Enseñanza de la Estadística; y Licenciada en Estadística, por la Universidad Nacional de Trujillo (Perú). Doctor Honoris Causa por la Universidad José Carlos Mariátegui y la Universidad San Pedro, Profesora Emérita de la Universidad Nacional de Trujillo y Miembro Honorario del Colegio de Estadísticos del Perú.</p>
+  <section class="seccion-investigadores">
+    <h2 class="subtitulo-negro">Investigadores Principales</h2>
+    <div class="grid-investigadores">
+      <div class="caja-investigador">
+        <h3>Reynaldo Javier Franco Lizarzaburu</h3>
+        <p>Médico Cirujano por la Universidad Nacional de Trujillo (Perú). Especialista en investigación clínica y salud pública.</p>
+        <div class="badges">
+          <span class="badge">ORCID</span>
+          <span class="badge">ResearchGate</span>
+          <span class="badge">RENATI</span>
         </div>
       </div>
-    </section>
-
-    <section class="investigadores">
-      <h2>Investigadores principales</h2>
-
-      <div class="investigador">
-        <img src="img/Imed.03.RJFLjpg.jpg" alt="Reynaldo Javier Franco Lizarzaburu" />
-        <div class="investigador-info">
-          <h4>Reynaldo Javier Franco Lizarzaburu</h4>
-          <p>Médico Cirujano por la Universidad Nacional de Trujillo (Perú), con especialidad en Medicina Familiar y Comunitaria, por la Universidad Antenor Orrego (Perú), estudios de maestría en Educación en Medicina por la Universidad San Pedro (Perú), y diplomado en investigación científica, también por la Universidad San Pedro (Perú). Ha realizado investigación como investigador principal e investigador adjunto en torno a tratamientos complementarios para pacientes con diabetes mellitus, y tuberculosis, y ha participado en estudios sobre investigación científica universitaria y violencia contra la gestante. Ha sido asesor de tesis y docente de la Escuela de Medicina de la Universidad San Pedro.</p>
-          <div class="investigador-links">
-            <a href="https://orcid.org/0000-0002-9558-8059" target="_blank">ORCID</a>
-            <a href="https://www.researchgate.net/profile/Reynaldo-Lizarzaburu" target="_blank">ResearchGate</a>
-            <a href="https://renati.sunedu.gob.pe/simple-search?query=REYNALDO+JAVIER+FRANCO+LIZARZABURU" target="_blank">RENATI</a>
-          </div>
+      
+      <div class="caja-investigador">
+        <h3>Bárbara Eliana Coaguila Mitta</h3>
+        <p>Doctora en Ciencias de la Educación (Perú). Experta en metodologías de investigación educativa.</p>
+        <div class="badges">
+          <span class="badge">ORCID</span>
         </div>
       </div>
-
-      <div class="investigador">
-        <img src="img/Imed.01.BECM.jpg" alt="Bárbara Eliana Coaguila Mitta" />
-        <div class="investigador-info">
-          <h4>Bárbara Eliana Coaguila Mitta</h4>
-          <p>Doctora en Ciencias de la Educación (Perú), por la Universidad Nacional de San Agustín (Perú), magíster en Docencia Superior y Gestión Educativa, por la Universidad César Vallejo (Perú), y Asistenta Social, por la Universidad Nacional de San Agustín (Perú). Es profesora asociada de la Facultad de Ciencias Histórico Sociales de la Universidad Nacional de San Agustín, en Arequipa (Perú). Ha desarrollado investigación respecto de la comunidad en entornos urbanos y rurales.</p>
-          <div class="investigador-links">
-            <a href="https://orcid.org/0000-0003-1845-7503" target="_blank">ORCID</a>
-          </div>
+      
+      <div class="caja-investigador">
+        <h3>Areliz Irma Colque Jara</h3>
+        <p>Doctora en Administración, por la Universidad Privada de Tacna (Perú). Especialista en gestión organizacional.</p>
+        <div class="badges">
+          <span class="badge">ORCID</span>
         </div>
       </div>
-
-      <div class="investigador">
-        <img src="img/Imed.07.AICJ.jpg" alt="Areliz Irma Colque Jara" />
-        <div class="investigador-info">
-          <h4>Areliz Irma Colque Jara</h4>
-          <p>Doctora en Administración, por la Universidad Privada de Tacna (Perú), magíster en Psicología Educativa, por la Universidad César Vallejo (Perú), magíster en Docencia Universitaria y Gestión Educativa, por la Universidad Privada de Tacna (Perú), y Psicóloga, por la Universidad Nacional de San Agustín (Perú). Fundadora de la Escuela Académica de Psicología de la Universidad José Carlos Mariátegui (Perú), ha ejercido como coordinadora de la Escuela de Posgrado, y docente de posgrado y pregrado de la misma universidad.</p>
-          <div class="investigador-links">
-            <a href="https://orcid.org/0000-0001-8645-2515" target="_blank">ORCID</a>
-          </div>
+      
+      <div class="caja-investigador">
+        <h3>Oscar Alberto Granados Maldonado</h3>
+        <p>Doctor en Administración, por la Universidad Privada de Tacna (Perú). Investigador en gestión estratégica.</p>
+        <div class="badges">
+          <span class="badge">ORCID</span>
         </div>
       </div>
-
-      <div class="investigador">
-        <img src="img/Imed.04.OAGM.jpg" alt="Oscar Alberto Granados Maldonado" />
-        <div class="investigador-info">
-          <h4>Oscar Alberto Granados Maldonado</h4>
-          <p>Doctor en Administración, por la Universidad Privada de Tacna (Perú), magíster en Docencia Universitaria y Gestión Educativa, por la Universidad Privada de Tacna (Perú), y Médico Veterinario Zootecnista, por la Universidad Nacional del Altiplano. En la gestión pública, ha sido Director Ejecutivo del Servicio Nacional de Sanidad Agraria (Senasa, Perú) en las regiones de Cusco y Moquegua. Ha ejercido la docencia en la Universidad José Carlos Mariátegui y en la Universidad Alas Peruanas.</p>
-          <div class="investigador-links">
-            <a href="https://orcid.org/0000-0001-6542-7003" target="_blank">ORCID</a>
-          </div>
+      
+      <div class="caja-investigador">
+        <h3>William B. Campos Lizarzaburu</h3>
+        <p>Doctor en Administración y Magister en Docencia Universitaria y Gestión Educativa. Experto en desarrollo organizacional.</p>
+        <div class="badges">
+          <span class="badge">ORCID</span>
+          <span class="badge">Academia.edu</span>
+          <span class="badge">ResearchGate</span>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="investigador">
-        <img src="img/Imed.02.WBCL.jpg" alt="William B. Campos Lizarzaburu" />
-        <div class="investigador-info">
-          <h4>William B. Campos Lizarzaburu</h4>
-          <p>Doctor en Administración y Magister en Docencia Universitaria y Gestión Educativa, por la Universidad Privada de Tacna (Perú), y Bachiller en Humanidades con mención en Lingüística y Literatura, por la Pontificia Universidad Católica del Perú. Ha ejercido docencia en las escuelas de posgrado de la Universidad San Pedro (Perú) y de la Universidad José Carlos Mariátegui (Perú), y ha sido docente en el Programa de Capacitación en Investigación Científica de la Universidad San Pedro (Perú). Ha desarrollado amplios intereses de investigación.</p>
-          <div class="investigador-links">
-            <a href="https://orcid.org/0000-0002-9654-5915" target="_blank">ORCID</a>
-            <a href="https://independent.academia.edu/WilliamCamposLizarzaburu" target="_blank">Academia.edu</a>
-            <a href="https://www.researchgate.net/profile/William_Lizarzaburu" target="_blank">ResearchGate</a>
-          </div>
-        </div>
+  <div class="contenido-principal">
+    <div class="contenido-flex">
+      <div class="bloque">
+        <h2 class="subtitulo-verde">Ubicación</h2>
+        <p>Av. Simón Bolívar 1101, Trujillo - Perú</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 
   <footer class="footer">
-    Franciso Solano 504A, Dpto. 301, Trujillo - Perú | magisterdevelopmentinstitute@gmail.com
+    <div class="info">
+      <p><strong>Instituto Magister de Estudios para el Desarrollo</strong></p>
+      <p>Francisco Solano 504 A, Dpto. 301<br>Urb. San Andrés<br>Trujillo, Perú</p>
+      <p><img src="whatsapp-icon.png" alt="WhatsApp"> +51 998060237</p>
+      <p>magisterdevelopmentinstitute@gmail.com</p>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.844241524369!2d-79.04040442560328!3d-8.11733689191199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d7594891197%3A0xf5213744e57e652e!2sCalle%20Francisco%20Solano%20504%2C%20Trujillo%2013008!5e0!3m2!1ses!2spe!4v1753656560619!5m2!1ses!2spe" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </footer>
+
 </body>
+
 </html>
