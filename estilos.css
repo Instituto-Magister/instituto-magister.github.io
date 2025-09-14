@@ -170,3 +170,57 @@ body {
         height: 120px;
     }
 }
+/* Estilos para fundadores */
+.fundador-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.fundador-foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(18, 79, 26);
+}
+
+.fundador-info {
+    flex: 1;
+}
+
+.fundador-info h4 {
+    color: rgb(18, 79, 26);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.fundador-info .fecha {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.fundador-info .cargo {
+    color: rgb(18, 79, 26);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fundador-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .fundador-foto img {
+        width: 120px;
+        height: 120px;
+    }
+}
