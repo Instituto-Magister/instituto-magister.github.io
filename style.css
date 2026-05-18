@@ -27,20 +27,20 @@ justify-content: space-between;
 }
 /* --- TÍTULO --- */
 .site-title {
-font-family: 'Inter', sans-serif;
-font-size: 1.5rem; 
-color: #0C2A1F !important;
-text-align: left;
-font-weight: bold;
-line-height: 1; 
 margin: 0;
 padding: 0;
 flex-shrink: 0;
+}
+.site-title img {
+max-height: 70px;
+width: auto;
+display: block;
 }
 .site-container { display: flex; }
 .site-container-mobile { display: none; }
 .site-title { display: block; }
 .site-title-mobile { display: none; }
+
 /* ======================================
    TÍTULO DE LA PÁGINA MÓVIL
 ====================================== */
@@ -59,13 +59,13 @@ align-items: center;
 justify-content: space-between;
 }
 .site-title-mobile {
-font-family: 'Inter', sans-serif;
-font-size: 1.2rem;
-color: black !important;
-text-align: left; 
-font-weight: bold;
 margin: 0;
 padding: 0;
+}
+.site-title-mobile img {
+max-height: 50px;
+width: auto;
+display: block;
 }
 .site-container { display: none; }
 .site-container-mobile { display: flex; }   
